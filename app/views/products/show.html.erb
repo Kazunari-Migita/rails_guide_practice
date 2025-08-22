@@ -1,0 +1,10 @@
+<h1>Show Product</h1>
+
+<div>
+  <p><%= @login_message %> </p>
+  <p><%= @message %></p>
+  <p>Product Name: <%= @product.name %></p>
+  <%= link_to 'Back', products_path %>
+  <%= link_to "Edit", edit_product_path(@product) %>
+  <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+</div>
